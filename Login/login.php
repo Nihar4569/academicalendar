@@ -91,6 +91,7 @@ if(empty($err))
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
+<<<<<<< HEAD
               <li><a href="engineering.html">Engineering</a></li>
               <li><a href="medical.html">Medical</a></li>
               
@@ -117,6 +118,16 @@ if(empty($err))
             </ul>
           </li>
           <li><a href="aboutus.html">About</a></li>
+=======
+              <li><a href="../engineering.html">Engineering</a></li>
+              <li><a href="../medical.html">Medical</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="login.php">Login</a></li> 
+          <li><a href="register.php">Register</a></li> 
+          <li><a href="../aboutus.html">About</a></li>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
         </ul>
       </nav>
       
@@ -166,7 +177,11 @@ div {
 }
 </style>
 <div class="container mt-4">
+<<<<<<< HEAD
 <h3>Admin Login Portals</h3>
+=======
+<h3>Please Login Here:</h3>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
 <hr>
 
 <form action="" method="post">

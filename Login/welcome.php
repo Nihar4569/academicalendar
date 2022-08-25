@@ -36,6 +36,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
+<<<<<<< HEAD
               <li><a href="engineering.html">Engineering</a></li>
               <li><a href="medical.html">Medical</a></li>
               
@@ -53,6 +54,17 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
             </ul>
           </li>
           <li><a href="aboutus.html">About</a></li>
+=======
+              <li><a href="../engineering.html">Engineering</a></li>
+              <li><a href="../medical.html">Medical</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="logout.php">Logout</a></li> 
+          
+         
+          <li> <a class="nav-link" href="#"> <img src="https://img.icons8.com/metro/26/000000/guest-male.png"> <?php echo "". $_SESSION['username']?></a></li>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
         </ul>
       </nav>
       
@@ -107,7 +119,14 @@ div {
 <div class="container mt-4">
 <h3><?php echo "Welcome ". $_SESSION['username']?></h3><br><br>
 <form action="send.php" method="POST">
+<<<<<<< HEAD
   
+=======
+  <div>
+    <label for="fname">Event ID</label>
+    <input type="text" name="eid" placeholder="Event ID"><br>
+  </div>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
 
   <div>
   <label for="lname">Event Name</label>

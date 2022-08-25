@@ -107,12 +107,17 @@ mysqli_close($conn);
       <nav>
         <label class="logo">TechCoders</label>
         <ul>
+<<<<<<< HEAD
           <li><a class="active" href="index.html">Home</a></li>
+=======
+          <li><a class="active" href="../index.html">Home</a></li>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
           <li>
             <a href="#">Stream
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
+<<<<<<< HEAD
               <li><a href="engineering.html">Engineering</a></li>
               <li><a href="medical.html">Medical</a></li>
               
@@ -139,6 +144,16 @@ mysqli_close($conn);
             </ul>
           </li>
           <li><a href="aboutus.html">About</a></li>
+=======
+              <li><a href="../engineering.html">Engineering</a></li>
+              <li><a href="../medical.html">Medical</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="login.php">Login</a></li> 
+          <li><a href="register.php">Register</a></li> 
+          <li><a href="../aboutus.html">About</a></li>
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
         </ul>
       </nav>
       

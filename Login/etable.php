@@ -34,8 +34,11 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <th class="head">Event ID</th>
 <th class="head">Event Name</th>
 <th class="head">On Date</th>
+<<<<<<< HEAD
 <th class="head">Operation</th>
 
+=======
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
 </tr>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "events");
@@ -48,6 +51,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
+<<<<<<< HEAD
 echo 
 "<tr>
 <td>" . $row["eid"]. "</td>
@@ -55,6 +59,10 @@ echo
 <td>". $row["edate"]. "</td>
 <td> <a href='update.php?id=$row[eid]'> Update </a> </td> 
 </tr>";
+=======
+echo "<tr><td>" . $row["eid"]. "</td><td>" . $row["ename"] . "</td><td>"
+. $row["edate"]. "</td></tr>";
+>>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
 }
 echo "</table>";
 } else { echo "0 results"; }
