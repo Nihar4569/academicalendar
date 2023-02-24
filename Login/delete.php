@@ -1,19 +1,18 @@
 <html>
 <head>
-    <title>Updation</title>
+    <title>DeletionS</title>
 </head>
 <body>
     
     <center>
-        <h1> Update </h1>
+        <h1> delete </h1>
     
 
     <form action="" method="POST">
         <input type="text" name="eid" placeholder="Enter event id"/><br><br>
-        <input type="text" name="ename" placeholder="Enter event naame"/><br><br>
-        <input type="date" name="edate" placeholder="Enter event date"/><br><br>
         
-        <input type="submit" name="update" value="UPDATE DATA">
+        
+        <input type="submit" name="update" value="Delete DATA">
     </form>
     </center>
 </body>
@@ -30,12 +29,12 @@ if(isset($_POST['update']))
     echo $query;
     $query_run = mysqli_query($connection,$query);
     if ($query_run) {
-        echo '<script> type="text/javascript"> alert("Data Updated") </script>';
+        echo '<script> type="text/javascript"> alert("Data Deleted") </script>';
     }
     
     else
     {
-        echo '<script>  type="text/javascript"> alert("Data not Updated") </script>';
+        echo '<script>  type="text/javascript"> alert("Data not Deleted") </script>';
     }
 }   
 

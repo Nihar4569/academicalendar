@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Academic Calendar</title>
+
+   <meta charset="utf-8" />
+   <meta
+     name="viewport"
+     content="width=device-width,initial-scale=1.0, maximum-scale=1.0"
+   />
+
+   <!-- Add the evo-calendar.css for styling -->
+   <link
+     rel="stylesheet"
+     type="text/css"
+     href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"
+   />
+   <link rel="stylesheet" type="text/css" href="css/evo-calendar.midnight-blue.css" />
+   <link rel="stylesheet" href="styleHeader.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="styleFooter.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+   <!-- Fonts -->
+   <link
+     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+     rel="stylesheet"
+   />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+     rel="stylesheet"
+   />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+     rel="stylesheet"
+   />
+ </head>
+ <body  >
+   <header>
+     <nav>
+       <label class="logo">TechCoders</label>
+       <ul>
+         <li><a class="active" href="index.html">Home</a></li>
+         <li><a class="active" href="index1.html">Calendar</a></li>
+         <li>
+           <a href="#">Stream
+             <i class="fas fa-caret-down"></i>
+           </a>
+           <ul>
+             <li><a href="engineering.html">Engineering</a></li>
+             <li><a href="medical.html">Medical</a></li>
+
+           </ul>
+         </li>
+
+         <li><a href="exam.html">Exam links</a></li>
+       </ul>
+     </nav>
+     <div class="break"></div>
+
+ </header>
+
+
+
+   <div id="calendar"></div>
+
+   <br>
+   <table width="100%" style="color: aliceblue;" >
+   <tr>
+     <td > <img src="images/yellow_circle-modified.png" alt="color" width="15px" > </td>
+     <td >National Holiday</td>
+
+     <td><img src="images/green_circle-modified.png" alt="color" width="15px"></td>
+     <td>Vacation Leave</td>
+
+     <td><img src="images/red_circle-modified.png" alt="color" width="15px"></td>
+     <td>Exam</td>
+   </tr>
+ </table>
+ <br>
+
+ <hr>
+ <div style="text-align: center;">
+   <br>
+   <a>
+   To view your events list: <button onclick="location.href='Login/etable.php';"> Click Here</button>
+   </a>
+   <br>
+   <br>
+ </div>
+
+
+ <!-- TABLE -->
+ <link rel="stylesheet" href="table.css">
+ <!-- <h1 style="color: rgb(0, 26, 128);",>Engineering Schedule</h1> -->
+
+   <div class="t1">
+       <table>
+
+         <tr id="header">
+          <th style="height: 100px;" colspan="4" ><h1>National Holidays</h1></th>
+         </tr>
+
+         <tr id="header">
+           <th>Holiday</th>
+           <th>Date</th>
+           <th>Day</th>
+         </tr>
+         <tr>
+           <th>New Year</th>
+           <th>1st January</th>
+           <th>Saturday</th>
+         </tr>
+         <tr>
+           <th>Republic Day</th>
+           <th>26th January</th>
+           <th>Wednesday</th>
+         </tr>
+         <tr>
+           <th>Eid-al-fitre</th>
+           <th>21st April</th>
+           <th>Thursday</th>
+         </tr>
+         <tr>
+           <th>Labour's Day</th>
+           <th>1st May</th>
+           <th>Sunday</th>
+         </tr>
+         <tr>
+           <th>Independence Day</th>
+           <th>15th August</th>
+           <th>Monday</th>
+         </tr>
+         <tr>
+           <th>Gandhi Jayanti</th>
+           <th>2nd October</th>
+           <th>Sunday</th>
+         </tr>
+         <tr>
+           <th>Christmas Day</th>
+           <th>25th December</th>
+           <th>Sunday</th>
+         </tr>
+
+       </table>
+     </div>
+
+     <br>
+     <br>
+
+   <footer class="footer-distributed">
+     <h1 style="color: white;" >Academic<span>Calendar</span></h1>
+
+     <div class="footer-right">
+       <p class="footer-company-about">
+         <span>About the company</span><br>
+         <h5>We, the techcoders, are first year students, who are aiming to build an integrated annual academic calendar website for the ease of students and all the Indian Universities.</h5><br>
+       </p>
+
+       <a href="https://www.facebook.com" target="_blank"><img src="Logos/fb.png" width="40px" alt=""></a>
+       <a href="https://twitter.com/" target="_blank"><img src="Logos/twitter.png" width="40px" alt=""></a>
+       <a href="https://www.linkedin.com/" target="_blank"><img src="Logos/Linkedin-logo-on-transparent--background-PNG.png" width="40px" alt=""></a>
+       <a href="https://github.com/" target="_blank"><img src="Logos/github.png" width="40px" alt=""></a>
+
+     </div>
+
+     <div class="footer-left">
+
+       <div class="footer-left">
+
+         <p class="footer-links">
+           <a class="link-1" href="index.html">Home</a>
+
+           <a href="#">Blog</a>
+
+           <a href="feedback.html">Feedback</a>
+
+           <a href="aboutus.html">About Us</a>
+            <a href="contactUs.html">Contact</a>
+         </p>
+
+         <p>TechCoders &copy; 2021</p>
+       </div>
+
+   </footer>
+
+   <!-- jQuery -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+   <!-- Add the evo-calendar.js for the calendar -->
+   <script src="js/evo-calendar.min.js"></script>
+   <script src="event.js"></script>
+
+
+ </body>
+</html>

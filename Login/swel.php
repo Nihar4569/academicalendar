@@ -1,70 +1,15 @@
 <?php
-//This script will handle login
+
 session_start();
 
-// check if the user is already logged in
-if(isset($_SESSION['username']))
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 {
-    header("location: welcome.php");
-    exit;
-}
-require_once "config.php";
-
-$username = $password = "";
-$err = "";
-
-// if request method is post
-if ($_SERVER['REQUEST_METHOD'] == "POST"){
-    if(empty(trim($_POST['username'])) || empty(trim($_POST['password'])))
-    {
-        $err = "Please enter username + password";
-    }
-    else{
-        $username = trim($_POST['username']);
-        $password = trim($_POST['password']);
-    }
-
-
-if(empty($err))
-{
-    $sql = "SELECT id, username, password FROM users WHERE username = ?";
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $param_username);
-    $param_username = $username;
-
-
-    // Try to execute this statement
-    if(mysqli_stmt_execute($stmt)){
-        mysqli_stmt_store_result($stmt);
-        if(mysqli_stmt_num_rows($stmt) == 1)
-                {
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                    if(mysqli_stmt_fetch($stmt))
-                    {
-                        if(password_verify($password, $hashed_password))
-                        {
-                            // this means the password is corrct. Allow user to login
-                            session_start();
-                            $_SESSION["username"] = $username;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["loggedin"] = true;
-
-                            //Redirect user to welcome page
-                            header("location: welcome.php");
-
-                        }
-                    }
-
-                }
-
-    }
-}
-
-
+    header("location: login.php");
 }
 
 
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -78,10 +23,10 @@ if(empty($err))
     <link rel="stylesheet" href="../styleHeader.css">
 
 
-
+    <title>Acadamic login system!</title>
   </head>
   <body>
-    <header>
+  <header>
       <nav>
         <label class="logo">TechCoders</label>
         <ul>
@@ -92,19 +37,24 @@ if(empty($err))
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
+
               <li><a href="../engineering.html">Engineering</a></li>
               <li><a href="../medical.html">Medical</a></li>
 
             </ul>
           </li>
 
-          <li><a href="../exam.html">Exam links</a></li>
+          <li><a href="logout.php">Logout</a></li>
+
+          <li> <a class="nav-link" href="#"> <img src="https://img.icons8.com/metro/26/000000/guest-male.png"> <?php echo "". $_SESSION['username']?></a></li>
+
         </ul>
       </nav>
-      
+
 
   </header>
-  <style>
+  <br><br><br>
+<style>
   h3, h4{
     color: #00adb5  ;
   }
@@ -147,30 +97,56 @@ div {
   padding: 20px;
 }
 </style>
+
+
 <div class="container mt-4">
+<h3><?php echo "Welcome ". $_SESSION['username']?></h3><br><br>
+<form action="send.php" method="POST">
 
 
 
-<h3>Admin Login Portal:</h3>
 
+
+  <div>
+  <label for="lname">Event Name</label>
+    <input type="text" name="ename" placeholder="Your Event Name"><br>
+  </div>
+
+  <div>
+  <label for="lname">Start date (MM/DD/YYYY)</label>
+    <input type="date" name="sdate" placeholder="Your Event date">
+  </div>
+  <div>
+  <label for="lname">End date (MM/DD/YYYY)</label>
+    <input type="date" name="edate" placeholder="Your Event date">
+  </div>
+  <div>
+  <label for="lname">Link</label>
+    <input type="url" name="link" placeholder="Enter Event Link">
+  </div>
+  <div>
+  <label for="lname">Description</label><br>
+    <input  name="Description" placeholder="Description">
+  </div>
+
+
+
+        <br>
+
+
+
+        <br>
+
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+    <h4>
+    To view your events list: <button onclick="location.href='stable.php';"> Click Here</button>
+    </h4>
+    <h4>To view your Calendar, <button onclick="location.href='../index2.html';"> Click Here.</button></h4>
 <hr>
-
-<form action="" method="post">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
 
 </div>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Academic Calendar</title>
@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="styleHeader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="styleFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
 
     <!-- Fonts -->
     <link
@@ -51,13 +54,14 @@
 
             </ul>
           </li>
-          
+
           <li><a href="exam.html">Exam links</a></li>
         </ul>
       </nav>
       <div class="break"></div>
 
   </header>
+
 
 
     <div id="calendar"></div>
@@ -77,63 +81,18 @@
   </table>
   <br>
 
+  <hr>
+  <div style="text-align: center;">
+    <br>
+    <a  href="evtable.php" style="color:white ;">Click here to show new Events.</a>
+    <br>
+    <br>
+  </div>
+
 
   <!-- TABLE -->
   <link rel="stylesheet" href="table.css">
   <!-- <h1 style="color: rgb(0, 26, 128);",>Engineering Schedule</h1> -->
-
-    <div class="t1">
-      <table >
-
-
-        <tr id="header">
-          <th style="height: 100px;" colspan="4" ><h1>Schedule For Engineering </h1></th>
-         </tr>
-        <tr id="header">
-          <th></th>
-          <th>Undergraduate</th>
-         <th>Postgraduate</th>
-        </tr>
-        <tr>
-          <th>Odd Sem</th>
-          <th>2nd week of July – 1st week of December</th>
-          <th>2nd week of July – End of November</th>
-        </tr>
-
-        <tr>
-          <th>Even Sem</th>
-          <th>3rd week of December – 1st week of May</th>
-          <th>2nd week of December – 1st week of May</th>
-        </tr>
-
-        <tr>
-          <th>Semester Break</th>
-          <th>2nd week of December</th>
-          <th>1st week of December</th>
-        </tr>
-
-        <tr>
-          <th>Year Break-Vacations</th>
-          <th>2nd week of May – 1st week of July</th>
-          <th>2nd week of May – 1st week of July</th>
-        </tr>
-
-        <tr>
-          <th>Results</th>
-          <th>4th week of May</th>
-          <th>4th week of May</th>
-        </tr>
-
-        <tr>
-          <td></td>
-          <td style="text-align="center""> For more information click here: <button onclick="location.href='PDF/Engineering.pdf';"> Open PDF</button></td>
-          <td></td>
-        </tr>
-      </table>
-      <br>
-      <br>
-
-    </div>
 
     <div class="t1">
         <table>
@@ -189,7 +148,6 @@
       <br>
       <br>
 
-
     <footer class="footer-distributed">
       <h1 style="color: white;" >Academic<span>Calendar</span></h1>
 
@@ -208,27 +166,29 @@
 
       <div class="footer-left">
 
-        <p class="footer-links">
-          <a class="link-1" href="index.html">Home</a>
+        <div class="footer-left">
 
-          <a href="#">Blog</a>
+          <p class="footer-links">
+            <a class="link-1" href="index.html">Home</a>
 
-          <a href="feedback.html">Feedback</a>
+            <a href="#">Blog</a>
 
-          <a href="aboutus.html">About Us</a>
-           <a href="contactUs.html">Contact</a>
-        </p>
+            <a href="feedback.html">Feedback</a>
 
-        <p>TechCoders &copy; 2021</p>
-      </div>
+            <a href="aboutus.html">About Us</a>
+             <a href="contactUs.html">Contact</a>
+          </p>
+
+          <p>TechCoders &copy; 2021</p>
+        </div>
 
     </footer>
+
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <!-- Add the evo-calendar.js for the calendar -->
     <script src="js/evo-calendar.min.js"></script>
-    <script src="event.eng.js"></script>
-
+    <script src="event.js"></script>
 
 
   </body>

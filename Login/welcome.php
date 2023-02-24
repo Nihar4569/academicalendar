@@ -21,7 +21,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styleHeader.css">
-   
+
 
     <title>Acadamic login system!</title>
   </head>
@@ -31,44 +31,27 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         <label class="logo">TechCoders</label>
         <ul>
           <li><a class="active" href="../index.html">Home</a></li>
+          <li><a class="active" href="../index1.html">Calendar</a></li>
           <li>
             <a href="#">Stream
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
-<<<<<<< HEAD
-              <li><a href="engineering.html">Engineering</a></li>
-              <li><a href="medical.html">Medical</a></li>
-              
-            </ul>
-          </li>
-          <li><a href="logout.php">LogOut</a></li>
-          <li>
-            <a href="#">Register
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <ul>
-              <li><a href="Login/sreg.php">Super Admin</a></li>
-              <li><a href="Login/register.php">Admin</a></li>
-              
-            </ul>
-          </li>
-          <li><a href="aboutus.html">About</a></li>
-=======
+
               <li><a href="../engineering.html">Engineering</a></li>
               <li><a href="../medical.html">Medical</a></li>
-              
+
             </ul>
           </li>
-          <li><a href="logout.php">Logout</a></li> 
-          
-         
+
+          <li><a href="logout.php">Logout</a></li>
+
           <li> <a class="nav-link" href="#"> <img src="https://img.icons8.com/metro/26/000000/guest-male.png"> <?php echo "". $_SESSION['username']?></a></li>
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
+
         </ul>
       </nav>
-      
-      
+
+
   </header>
   <br><br><br>
 <style>
@@ -114,46 +97,55 @@ div {
   padding: 20px;
 }
 </style>
-  
+
 
 <div class="container mt-4">
 <h3><?php echo "Welcome ". $_SESSION['username']?></h3><br><br>
 <form action="send.php" method="POST">
-<<<<<<< HEAD
-  
-=======
-  <div>
-    <label for="fname">Event ID</label>
-    <input type="text" name="eid" placeholder="Event ID"><br>
-  </div>
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
+
+
+
+
 
   <div>
   <label for="lname">Event Name</label>
-    <input type="text" name="ename" placeholder="Your Event Name"><br>
+    <input type="text" name="ename" placeholder="Your Event Name">
   </div>
 
   <div>
-  <label for="lname">Event date</label>
+  <label for="lname">Start date (MM/DD/YYYY)</label>
+    <input type="date" name="sdate" placeholder="Your Event date">
+  </div>
+  <div>
+  <label for="lname">End date (MM/DD/YYYY)</label>
     <input type="date" name="edate" placeholder="Your Event date">
   </div>
-    
+  <div>
+  <label for="lname">Link</label>
+    <input type="url" name="link" placeholder="Enter Event Link">
+  </div>
+  <div>
+  <label for="lname">Description</label>
+    <input  name="Description" placeholder="Description">
+  </div>
 
-    
-        <br>
-        
-        
 
-        <br>  
+
+
 
         <div>
             <input type="submit" value="Submit Now">
             <input type="reset" value="Reset Now">
         </div>
+
+
+
+
     </form>
     <h4>
     To view your events list: <button onclick="location.href='etable.php';"> Click Here</button>
     </h4>
+    <h4>To view your Calendar, <button onclick="location.href='../index3.html';"> Click Here.</button></h4>
 <hr>
 
 </div>

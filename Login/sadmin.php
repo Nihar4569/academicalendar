@@ -5,7 +5,7 @@ session_start();
 // check if the user is already logged in
 if(isset($_SESSION['username']))
 {
-    header("location: welcome.php");
+    header("location: swel.php");
     exit;
 }
 require_once "config.php";
@@ -31,8 +31,8 @@ if(empty($err))
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $param_username);
     $param_username = $username;
-    
-    
+
+
     // Try to execute this statement
     if(mysqli_stmt_execute($stmt)){
         mysqli_stmt_store_result($stmt);
@@ -50,15 +50,15 @@ if(empty($err))
                             $_SESSION["loggedin"] = true;
 
                             //Redirect user to welcome page
-                            header("location: welcome.php");
-                            
+                            header("location: swel.php");
+
                         }
                     }
 
                 }
 
     }
-}    
+}
 
 
 }
@@ -76,51 +76,33 @@ if(empty($err))
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styleHeader.css">
-    
 
-   
+
+
   </head>
   <body>
-  <header>
+    <header>
       <nav>
         <label class="logo">TechCoders</label>
         <ul>
           <li><a class="active" href="../index.html">Home</a></li>
+          <li><a class="active" href="../index1.html">Calendar</a></li>
           <li>
             <a href="#">Stream
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
-              <li><a href="engineering.html">Engineering</a></li>
-              <li><a href="medical.html">Medical</a></li>
-              
+              <li><a href="../engineering.html">Engineering</a></li>
+              <li><a href="../medical.html">Medical</a></li>
+
             </ul>
           </li>
-          <li>
-            <a href="#">Login
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <ul>
-              <li><a href="sadmin.php">Super Admin</a></li>
-              <li><a href="login.php">Admin</a></li>
-              
-            </ul>
-          </li>
-          <li>
-            <a href="#">Register
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <ul>
-              <li><a href="sreg.php">Super Admin</a></li>
-              <li><a href="register.php">Admin</a></li>
-              
-            </ul>
-          </li>
-          <li><a href="aboutus.html">About</a></li>
+
+          <li><a href="../exam.html">Exam links</a></li>
         </ul>
       </nav>
       
-      
+
   </header>
   <style>
   h3, h4{
