@@ -40,6 +40,7 @@
         <label class="logo">TechCoders</label>
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="active" href="index1.html">Calendar</a></li>
           <li>
             <a href="#">Stream
               <i class="fas fa-caret-down"></i>
@@ -47,29 +48,43 @@
             <ul>
               <li><a href="engineering.html">Engineering</a></li>
               <li><a href="medical.html">Medical</a></li>
-              
+
             </ul>
           </li>
-          <li><a href="Login/login.php">Login</a></li> 
-          <li><a href="Login/register.php">Register</a></li> 
-          <li><a href="aboutus.html">About</a></li>
+          
+          <li><a href="exam.html">Exam links</a></li>
         </ul>
       </nav>
       <div class="break"></div>
-      
+
   </header>
 
 
   <div id="calendar"></div>
-  <br><br><br>
+
+  <br>
+  <table width="100%" style="color: aliceblue;" >
+  <tr>
+    <td > <img src="images/yellow_circle-modified.png" alt="color" width="15px" > </td>
+    <td >National Holiday</td>
+
+    <td><img src="images/green_circle-modified.png" alt="color" width="15px"></td>
+    <td>Vacation Leave</td>
+
+    <td><img src="images/red_circle-modified.png" alt="color" width="15px"></td>
+    <td>Exam</td>
+  </tr>
+</table>
+
+  <br>
  <!-- TABLE -->
  <link rel="stylesheet" href="table.css">
  <!-- <h1 style="color: rgb(0, 26, 128);",>Engineering Schedule</h1> -->
 
    <div class="t1">
      <table >
-       
-       
+
+
        <tr id="header">
         <th style="height: 100px;" colspan="4" ><h1>Schedule For Medical</h1></th>
        </tr>
@@ -77,45 +92,110 @@
          <th></th>
          <th>Undergraduate</th>
          <th>Postgraduate</th>
-         <th>PHD</th>
        </tr>
        <tr>
          <th>Odd Sem</th>
          <th>2nd week of July – 1st week of December</th>
          <th>2nd week of July – 4th week of November
           </th>
-         <th>Null</th>
        </tr>
 
        <tr>
          <th>Even Sem</th>
          <th>3rd week of December – 1st week of May</th>
          <th>2nd week of December – 1st week of May</th>
-         <th>Null</th>
+       </tr>
+
+       <tr>
+         <th>Semester Break</th>
+         <th>2nd week of December</th>
+         <th>1st week of December</th>
+       </tr>
+
+       <tr>
+         <th>Year Break-Vacations</th>
+         <th>2nd week of May – 1st week of July</th>
+         <th>2nd week of May – 1st week of July</th>
+       </tr>
+
+       <tr>
+         <th>Results</th>
+         <th>4th week of May</th>
+         <th>4th week of May</th>
        </tr>
 
        <tr>
          <td></td>
-         <td colspan="2"> For more information click here: <button onclick="location.href='PDF/Medical.pdf';"> Open PDF</button></td>
-         <td></td>
+         <td style="text-align="center""> For more information click here: <button onclick="location.href='PDF/Medical.pdf';"> Open PDF</button></td>
          <td></td>
        </tr>
      </table>
      <br>
      <br>
+
+   </div>
+
+   <div class="t1">
+       <table>
+
+         <tr id="header">
+          <th style="height: 100px;" colspan="4" ><h1>National Holidays</h1></th>
+         </tr>
+
+         <tr id="header">
+           <th>Holiday</th>
+           <th>Date</th>
+           <th>Day</th>
+         </tr>
+         <tr>
+           <th>New Year</th>
+           <th>1st January</th>
+           <th>Saturday</th>
+         </tr>
+         <tr>
+           <th>Republic Day</th>
+           <th>26th January</th>
+           <th>Wednesday</th>
+         </tr>
+         <tr>
+           <th>Eid-al-fitre</th>
+           <th>21st April</th>
+           <th>Thursday</th>
+         </tr>
+         <tr>
+           <th>Labour's Day</th>
+           <th>1st May</th>
+           <th>Sunday</th>
+         </tr>
+         <tr>
+           <th>Independence Day</th>
+           <th>15th August</th>
+           <th>Monday</th>
+         </tr>
+         <tr>
+           <th>Gandhi Jayanti</th>
+           <th>2nd October</th>
+           <th>Sunday</th>
+         </tr>
+         <tr>
+           <th>Christmas Day</th>
+           <th>25th December</th>
+           <th>Sunday</th>
+         </tr>
+
+       </table>
+     </div>
+
      <br>
      <br>
 
-   </div>
-   
    <footer class="footer-distributed">
     <h1 style="color: white;" >Academic<span>Calendar</span></h1>
 
     <div class="footer-right">
       <p class="footer-company-about">
         <span>About the company</span><br>
-        <h5> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-        euismod convallis velit, eu auctor lacus vehicula sit amet.</h5><br>
+        <h5>We, the techcoders, are first year students, who are aiming to build an integrated annual academic calendar website for the ease of students and all the Indian Universities.</h5><br>
       </p>
 
       <a href="https://www.facebook.com" target="_blank"><img src="Logos/fb.png" width="40px" alt=""></a>
@@ -128,13 +208,11 @@
     <div class="footer-left">
 
       <p class="footer-links">
-        <a class="link-1" href="#">Home</a>
+        <a class="link-1" href="index.html">Home</a>
 
         <a href="#">Blog</a>
 
-        <a href="#">Faq</a>
-
-        <a href="#">Pricing</a>
+        <a href="feedback.html">Feedback</a>
 
         <a href="aboutus.html">About Us</a>
          <a href="contactUs.html">Contact</a>

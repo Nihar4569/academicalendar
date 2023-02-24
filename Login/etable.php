@@ -28,17 +28,19 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <body>
 <table>
     <tr>
-    <th class="headtop" colspan="3" ><h4>Your University Events List </h4></th>
+    <th class="headtop" colspan="7  " ><h4>Your University Events List </h4></th>
     </tr>
 <tr>
 <th class="head">Event ID</th>
 <th class="head">Event Name</th>
-<th class="head">On Date</th>
-<<<<<<< HEAD
+<th class="head">Start</th>
+<th class="head">End</th>
+<th class="head">Link</th>
+<th class="head">Description</th>
+    
 <th class="head">Operation</th>
 
-=======
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
+
 </tr>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "events");
@@ -46,28 +48,32 @@ $conn = mysqli_connect("localhost", "root", "", "events");
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT eid, ename, edate FROM eventslist";
+$sql = "SELECT eid, ename, sdate, edate, link, Description FROM eventslist";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-<<<<<<< HEAD
+
 echo 
 "<tr>
 <td>" . $row["eid"]. "</td>
 <td>" . $row["ename"] . "</td>
+<td>". $row["sdate"]. "</td>
 <td>". $row["edate"]. "</td>
-<td> <a href='update.php?id=$row[eid]'> Update </a> </td> 
+<td> <a href=". $row["link"].">Link</a> </td>
+<td>". $row["Description"]. "</td>
+<td> <a href='update.php'> Update </a> </td> 
 </tr>";
-=======
-echo "<tr><td>" . $row["eid"]. "</td><td>" . $row["ename"] . "</td><td>"
-. $row["edate"]. "</td></tr>";
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
+
+// echo "<tr><td>" . $row["eid"]. "</td><td>" . $row["ename"] . "</td><td>"
+// . $row["edate"]. "</td></tr>";
+
 }
 echo "</table>";
 } else { echo "0 results"; }
 $conn->close();
 ?>
 </table>
+<a href="post.php">Post Events</a>
 </body>
 </html>

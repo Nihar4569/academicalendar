@@ -28,7 +28,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <body>
 <table>
     <tr>
-    <th class="headtop" colspan="8" ><h4>Your University Events List </h4></th>
+    <th class="headtop" colspan="7  " ><h4>Your University Events List </h4></th>
     </tr>
 <tr>
 <th class="head">Event ID</th>
@@ -38,7 +38,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <th class="head">Link</th>
 <th class="head">Description</th>
     
-<th colspan="2"   class="head">Operation</th>
+
 
 
 </tr>
@@ -62,8 +62,7 @@ echo
 <td>". $row["edate"]. "</td>
 <td> <a href=". $row["link"].">Link</a> </td>
 <td>". $row["Description"]. "</td>
-<td> <a href='update.php'> Update </a> </td> 
-<td> <a href='delete.php'> Delete </a> </td> 
+ 
 </tr>";
 
 // echo "<tr><td>" . $row["eid"]. "</td><td>" . $row["ename"] . "</td><td>"

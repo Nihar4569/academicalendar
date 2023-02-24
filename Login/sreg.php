@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
                 mysqli_stmt_store_result($stmt);
                 if(mysqli_stmt_num_rows($stmt) == 1)
                 {
-                    $username_err = "This username is already taken"; 
+                    $username_err = "This username is already taken";
                 }
                 else{
                     $username = trim($_POST['username']);
@@ -103,46 +103,28 @@ mysqli_close($conn);
     <title>PHP login system!</title>
   </head>
   <body>
-  <header>
+    <header>
       <nav>
         <label class="logo">TechCoders</label>
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="active" href="../index.html">Home</a></li>
+          <li><a class="active" href="../index1.html">Calendar</a></li>
           <li>
             <a href="#">Stream
               <i class="fas fa-caret-down"></i>
             </a>
             <ul>
-              <li><a href="engineering.html">Engineering</a></li>
-              <li><a href="medical.html">Medical</a></li>
-              
+              <li><a href="../engineering.html">Engineering</a></li>
+              <li><a href="../medical.html">Medical</a></li>
+
             </ul>
           </li>
-          <li>
-            <a href="#">Login
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <ul>
-              <li><a href="sadmin.php">Super Admin</a></li>
-              <li><a href="login.php">Admin</a></li>
-              
-            </ul>
-          </li>
-          <li>
-            <a href="#">Register
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <ul>
-              <li><a href="sreg.php">Super Admin</a></li>
-              <li><a href="register.php">Admin</a></li>
-              
-            </ul>
-          </li>
-          <li><a href="aboutus.html">About</a></li>
+
+          <li><a href="../exam.html">Exam links</a></li>
         </ul>
       </nav>
-      
-      
+      <div class="break"></div>
+
   </header>
   <style>
   h3, h4{

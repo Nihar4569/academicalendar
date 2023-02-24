@@ -1,11 +1,12 @@
 <?php
-<<<<<<< HEAD
+
 	
-=======
-	$eid = $_POST['eid'];
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
     $ename = $_POST['ename'];
+    $sdate = $_POST['sdate'];
     $edate = $_POST['edate'];
+    $link = $_POST['link'];
+    $Description = $_POST['Description'];
+
 
 	// Database connection
 	$conn = new mysqli('localhost','root','','events');
@@ -14,13 +15,12 @@
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
         
-<<<<<<< HEAD
-		$stmt = $conn->prepare("insert into eventslist(ename, edate) values(?, ?)");
-		$stmt->bind_param("ss", $ename, $edate);
-=======
-		$stmt = $conn->prepare("insert into eventslist(eid, ename, edate) values(?, ?, ?)");
-		$stmt->bind_param("sss", $eid, $ename, $edate);
->>>>>>> 5f48e1583f0d1409b71add890504a4b16164bfc3
+
+		$stmt = $conn->prepare("insert into eventslist(ename, sdate, edate, link, Description) values(?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssss", $ename, $sdate, $edate, $link, $Description);
+
+		
+
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Event added successfully...";
